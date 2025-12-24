@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi niña</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #fff5f7;
+            font-family: 'Georgia', serif; /* Fuente más estilo carta */
+            line-height: 1.6;
+            color: #5a4a4a;
+        }
+
+        
+        .card {
+            background: white;
+            padding: 40px;
+            border: 3px solid #f9d5e5;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            max-width: 700px;
+            width: 90%;
+        }
+
+        h2, h1 { color: #ffb7c5; margin-bottom: 20px; }
+
+        input {
+            width: 80%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #f9d5e5;
+            border-radius: 10px;
+            outline: none;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #f9d5e5;
+            color: #7a5c5c;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        button:hover { background-color: #ffb7c5; color: white; }
+
+        
+        #especial-content {
+            display: none;
+            animation: fadeIn 2s ease;
+        }
+
+        .texto-amor {
+            text-align: left;
+            white-space: pre-line; 
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            color: #665555;
+        }
+
+        .fotos-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .fotos-container img {
+            max-width: 100%;
+            height: auto;
+            width: 300px;
+            border-radius: 10px;
+            border: 8px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="miMusica" loop>
+        <source src="musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="login-section" class="card">
+        <h2>Quieres saber que fue lo que me gustó de ti y que hiciste para gustarme tanto? Entra aquí.</h2>
+        <input type="text" id="userInput" placeholder="Escribe tu nombre">
+        <input type="password" id="passInput" placeholder="Nuestra fecha (DD/MM/AAAA)">
+        <br>
+        <button onclick="verificar()">:)</button>
+    </div>
+
+    <div id="especial-content" class="card">
+        <h1>Feliz Navidad💛</h1>
+        
+        <div class="texto-amor">
+            Pues fue complicado, muy complicado. No fue nada fácil para mí al principio porque no lo sabía, que me gustabas. Yo no solo vi una chica guapa las primeras veces, vi una chica interesante, inteligente, divertida, con la que me podía pasar horas hablando, riendo o callados, que no se me hacía pesado. En ese momento yo me puse a pensar: “¿de verdad me gusta?”. Me hice esta pregunta porque yo pensaba que lo que pasaba entre nosotros era más una relación de amistad, ya que nos llevábamos súper bien y en pocos momentos pensaba en besarte, no porque no me parecieras guapa, sino porque me gustabas tanto que solo quería saber más de ti y hablar contigo toooodo el día. Entonces me puse a pensar, a pensar y me rayé un poco, hasta se lo medio conté al Dani y todo para ver si él me podía ayudar. El caso es que me di cuenta de que si me pasaba eso era porque empezaba a sentir cosas por ti, y el siguiente día que nos vimos llegó el tan esperado beso; ahí fue el momento en el que me conquistaste ya del todo, ya era todo tuyo.
+
+            En cuanto a lo que hiciste para gustarme no fue nada, ser tú misma y mostrarme una parte de ti bonita, que es como eres tú como persona. En verdad me he enamorado de ti, de tu forma de ser, de tratar a las demás personas, de aceptarme a mí tal y como soy, que a veces soy muy pesado y entiendo que cuesta, jeje. Yo siempre te estaré agradecido por ser mi profesora y mi mentora del amor. Tú me has enseñado todo lo que sé, a cómo hay que tratar a una chica, porque hasta ahora mi madre me había dicho cosas, pero tú me has abierto los ojos de verdad. Eres toda una inspiración para mí, te admiro mucho de verdad; aunque no lo quieras aceptar, eres lo mejor que hay. Te quiero muchísimo, eres el amor de mi vida y sé que estamos hechos el uno para el otro y estamos destinados a estar juntos para siempre. Siempre te voy a querer por todo lo bueno que me has hecho, le has dado color a mi vida y me has hecho ver el verdadero sentido de ella.
+
+            Podría seguir diciendo cosas bonitas de ti todo lo que me queda de vida y aun así me faltaría muchísimo por contar, que para contar son todas las historias y momentos que vamos a vivir, que pasarán de generación en generación. Primero se lo contaremos a nuestros hijos, luego nuestros nietos, seguido de nuestros bisnietos; sí, bisnietos, yo me niego a morir, quiero seguir disfrutando de ti para siempre.
+        </div>
+
+        <div class="fotos-container">
+            <img src="foto1.jpg" alt=":P">
+            <img src="foto2.jpg" alt=":D">
+        </div>
+    </div>
+
+    <script>
+        function verificar() {
+            const user = document.getElementById('userInput').value;
+            const pass = document.getElementById('passInput').value;
+            const musica = document.getElementById('miMusica');
+
+            
+            if ((user.toLowerCase() === "ari") && pass === "12/04/2025") {
+                document.getElementById('login-section').style.display = 'none';
+                document.getElementById('especial-content').style.display = 'block';
+                
+                document.body.style.alignItems = 'flex-start'; 
+                musica.play();
+            } else {
+                alert("Uy, revisa los datos, ¡falta algo de amor!");
+            }
+        }
+    </script>
+</body>
+</html>
